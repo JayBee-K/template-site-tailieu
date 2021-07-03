@@ -260,4 +260,31 @@ $(function () {
 			}
 		}
 	});
+	
+	const preview = new Swiper('#preview-slide .swiper-container', {
+		loop: false,
+		speed: 1000,
+		autoplay: {
+			delay: 10000,
+			disableOnInteraction: false,
+		},
+		navigation: {
+			nextEl: "#preview-slide .swiper-button-next",
+			prevEl: "#preview-slide .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 15,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 15,
+			},
+			1024: {
+				slidesPerView: 3,
+				spaceBetween: 15,
+			}
+		}
+	});
 });
