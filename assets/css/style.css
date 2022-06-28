@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
+@media screen and (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
 body {
     font-size: 14px;
     overflow-x: hidden;
@@ -114,6 +120,7 @@ textarea:focus,
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: .3s all ease;
 }
 
 .doc-heading {
@@ -389,6 +396,67 @@ textarea:focus,
     position: relative;
     z-index: 3;
     background: var(--color-dark-50);
+}
+
+.doc-header .doc-header_bottom .bottom-navigation {
+    margin-left: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.doc-header .doc-header_bottom .bottom-navigation__user {
+    position: relative;
+    margin-left: auto;
+}
+
+.doc-header .doc-header_bottom .bottom-navigation__user > a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: var(--color-white-50);
+    font-size: 1em;
+    position: relative;
+    transition: .3s all ease;
+}
+
+.doc-header .doc-header_bottom .bottom-navigation__user > a i {
+    font-size: .9em;
+    margin-right: 5px;
+}
+
+.doc-header .doc-header_bottom .bottom-navigation__user > ul {
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+    transition: transform 0.3s ease;
+    top: 100%;
+    right: 0;
+    background: var(--color-white);
+    box-shadow: 0 1px 15px 6px rgb(0 0 0 / 7%), 0 0 0 rgb(0 0 0 / 10%) inset;
+    min-width: 100%;
+    width: max-content;
+}
+
+.doc-header .doc-header_bottom .bottom-navigation__user > ul > li > a {
+    display: inline-block;
+    font-size: 1em;
+    padding: 8px 15px;
+    color: var(--color-dark);
+    transition: .3s all ease;
+}
+
+.doc-header .doc-header_bottom .bottom-navigation__user > ul > li :hover > a {
+    color: var(--primary-hover);
+}
+
+.doc-header .doc-header_bottom .bottom-navigation__user:hover {
+    color: var(--color-white);
+    background: var(--color-dark);
+}
+
+.doc-header .doc-header_bottom .bottom-navigation__user:hover > ul {
+    transform: scaleY(1);
 }
 
 .doc-header .doc-header_bottom .bottom-navigation > ul > li {
@@ -1052,7 +1120,7 @@ textarea:focus,
 }
 
 .doc-products {
-    background: var(--color-white-50);
+    background: var(--white);
     padding: 30px 0;
 }
 
@@ -1106,27 +1174,6 @@ textarea:focus,
 
 .card-product .card-body .card-title a:hover {
     color: var(--primary-hover);
-}
-
-.doc-videos {
-    background: var(--color-white);
-    padding: 30px 0;
-    border-top: 1px solid var(--color-white-75);
-}
-
-.video-embed {
-    position: relative;
-    width: 100%;
-    height: 220px;
-}
-
-.video-embed iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .doc-logo {
@@ -1281,7 +1328,7 @@ textarea:focus,
 .newsletter-title {
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 2.2em;
+    font-size: 2em;
     margin-left: 30px;
     position: relative;
     padding-bottom: 15px;
@@ -2410,4 +2457,73 @@ textarea:focus,
 
 .swiper-same-height .swiper-slide {
     height: auto !important;
+}
+
+.doc-feature {
+    padding: 30px 0;
+}
+
+.card-product_feature {
+    border-radius: 0;
+    background-color: #fff;
+}
+
+.card-product_feature .card-header {
+    border-radius: 0;
+    padding: 0;
+    border-bottom: 0;
+    background-color: #fff;
+}
+
+.card-product_feature .card-header:before {
+    display: block;
+    content: "";
+    padding-bottom: 85%;
+}
+
+.card-product_feature .card-header .card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: var(--primary-color);
+    margin-bottom: 0;
+    color: var(--white);
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: .3s all ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    min-height: 66.25px;
+}
+
+.card-product_feature .card-body {
+    padding: 5px 10px;
+    color: #777;
+    font-size: .95em;
+}
+
+.card-product_feature .card-body .card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.card-product_feature .card-body .card-text i {
+    width: 18px;
+    font-size: 1.1em;
+}
+
+.card-product_feature:hover .card-header img {
+    opacity: 0.8;
+}
+
+.card-product_feature:hover .card-header .card-title {
+    background-color: var(--primary-hover);
 }
