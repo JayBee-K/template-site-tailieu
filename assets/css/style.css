@@ -1059,6 +1059,10 @@ textarea:focus,
     transition: .3s all ease;
 }
 
+.card-article .card-body {
+    padding: 10px;
+}
+
 .card-article .card-body .card-title {
     font-size: 14px;
     padding-bottom: 15px;
