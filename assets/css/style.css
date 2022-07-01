@@ -1,12 +1,12 @@
-@media screen and (min-width: 1400px) {
-    .container {
-        max-width: 1360px;
-    }
-}
-
 @media screen and (min-width: 1200px) {
     .container {
         max-width: 90%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .container {
+        max-width: 1360px;
     }
 }
 
@@ -2539,6 +2539,7 @@ textarea:focus,
     -webkit-line-clamp: 1;
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    font-size: .9em;
 }
 
 .card-product_feature .card-body .card-text i {
@@ -2687,7 +2688,7 @@ textarea:focus,
 }
 
 .card-document .card-body .card-text:hover {
-    color: #A0AEC0;
+    color: #777;
 }
 
 .card-document .card-body ul li {
@@ -2699,7 +2700,7 @@ textarea:focus,
 }
 
 .text-gray {
-    color: #A0AEC0;
+    color: #777;
 }
 
 @media screen and (max-width: 768px) {
