@@ -367,16 +367,18 @@ textarea:focus,
 }
 
 .doc-header .doc-header_middle .middle-search form button {
-    width: auto;
     text-align: center;
-    color: var(--color-dark);
     background: 0 0;
     margin-left: 0;
     position: absolute;
     border: none;
-    right: 8px;
+    right: 0;
     top: 0;
+    background: var(--primary-color);
     height: 40px;
+    color: #fff;
+    width: 40px;
+    border-radius: 0 0.25rem 0.25rem 0;
 }
 
 .doc-header .doc-header_middle .middle-search form button:hover,
@@ -404,7 +406,7 @@ textarea:focus,
 .doc-header .doc-header_bottom {
     position: relative;
     z-index: 3;
-    background: var(--color-dark-50);
+    background: var(--background-menu);
 }
 
 @media screen and (min-width: 991px) {
@@ -893,16 +895,18 @@ textarea:focus,
     }
 
     .doc-header .doc-header_search form button {
-        width: auto;
         text-align: center;
-        color: var(--color-dark);
         background: 0 0;
         margin-left: 0;
         position: absolute;
         border: none;
-        right: 8px;
+        right: 0;
         top: 0;
+        background: var(--primary-color);
         height: 40px;
+        color: #fff;
+        width: 40px;
+        border-radius: 0 0.25rem 0.25rem 0;
     }
 
     .doc-header .doc-header_top .top-list .top-list__link > ul {
@@ -1245,167 +1249,9 @@ textarea:focus,
     }
 }
 
-.doc-review {
-    padding: 30px 0;
-    background: var(--color-white);
-}
-
-.doc-review blockquote {
-    position: relative;
-    padding: 20px 50px;
-    text-align: center;
-    width: 100%;
-    display: block;
-    color: var(--color-dark);
-    background: #f1f9f9;
-    font-size: 1.15em;
-    line-height: 1.8;
-    border: 1px solid var(--color-white-75);
-}
-
-.doc-review blockquote:before,
-.doc-review blockquote:after {
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 900;
-    line-height: 1;
-    color: var(--primary-hover);
-    font-size: 2em;
-    position: absolute;
-}
-
-.doc-review blockquote:before {
-    top: 15px;
-    left: 15px;
-    content: "\f10d";
-}
-
-.doc-review blockquote:after {
-    right: 15px;
-    bottom: 15px;
-    content: "\f10e";
-}
-
-.doc-review blockquote p:last-of-type {
-    margin-bottom: 0;
-}
-
-.doc-review blockquote + blockquote {
-    margin-top: 20px;
-}
-
-.doc-review .review-right img {
-    display: block;
-    margin: 0 auto;
-    height: 80px;
-    width: 80px;
-}
-
-.doc-review .review-right .title {
-    text-align: center;
-    font-size: 1.7em;
-    color: var(--color-dark);
-    font-weight: 600;
-    margin: 15px 0;
-}
-
-.doc-review .review-right .btn {
-    text-transform: uppercase;
-    font-size: 1.1em;
-    padding: 8px 20px;
-    font-weight: 700;
-    background: var(--primary-hover);
-    color: var(--color-white);
-    border-radius: 0;
-    border: 0;
-    outline: none;
-    box-shadow: 0 3px 0 var(--primary-color);
-}
-
-.doc-review .review-right .btn:active {
-    box-shadow: none;
-    background: var(--primary-color);
-}
-
-.doc-review .review-right .btn:hover {
-    background: var(--primary-color);
-}
-
-.doc-newsletter {
-    position: relative;
-    padding: 30px 0;
-    background: var(--color-white);
-}
-
-.newsletter-logo img {
-    max-height: 100px;
-}
-
-.newsletter-title {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 2em;
-    margin-left: 30px;
-    position: relative;
-    padding-bottom: 15px;
-    line-height: 1;
-}
-
-.newsletter-title:before {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 100px;
-    height: 2px;
-    background: var(--primary-hover);
-    bottom: 0;
-    left: 0;
-}
-
-@media screen and (max-width: 768px) {
-    .newsletter-title {
-        margin-top: 15px;
-        margin-left: 0;
-    }
-}
-
-.newsletter-content {
-    margin-top: 30px;
-    font-size: 1.15em;
-    line-height: 1.45;;
-}
-
-.newsletter-form .form-control {
-    border-radius: 0;
-    background: var(--color-white-50);
-    height: 46px;
-    font-size: 1.05em;
-}
-
-.newsletter-form .btn {
-    text-transform: uppercase;
-    font-size: 1.1em;
-    padding: 8px 20px;
-    font-weight: 700;
-    background: var(--primary-hover);
-    color: var(--color-white);
-    border-radius: 0;
-    border: 0;
-    outline: none;
-    box-shadow: 0 3px 0 var(--primary-color);
-}
-
-.newsletter-form .btn:active {
-    box-shadow: none;
-    background: var(--primary-color);
-}
-
-.newsletter-form .btn:hover {
-    background: var(--primary-color);
-}
-
 .doc-footer {
     padding: 0 0 20px;
-    background: var(--color-dark-25);
+    background: var(--background-footer);
 }
 
 .doc-footer .doc-footer-heading {
