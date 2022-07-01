@@ -373,27 +373,4 @@ $(function () {
             $(this).prev('.desc-content').addClass('content-full');
         }
     });
-
-    const previewImage = new Swiper('#preview-image .swiper-container', {
-        speed: 1000,
-        slidesPerView: 1.4,
-        spaceBetween: 15,
-        loopAdditionalSlides: 0,
-    });
-
-    handleZoomImageProduct($('#preview-image [data-fancybox=preview-image]'), previewImage);
 });
-const handleZoomImageProduct = function (elm, previewImage) {
-    let i = 0;
-    elm.click(function () {
-        i = 0;
-    });
-
-    elm.fancybox({
-        touch: true,
-        beforeShow: function (instance, current) {
-            let index = $(`[data-fancybox='preview-image'][href='${current.src}']`).attr('data-index');
-            previewImage.slideTo(index - 1);
-        },
-    });
-}
